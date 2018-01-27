@@ -1,0 +1,21 @@
+.thumbnail img{
+    width:100%;
+}
+#campThumbnail{
+    padding:0px;
+}
+
+.delete-form{
+    display:inline;
+}
+
+.forms{
+   width:30%;
+   margin:25px auto; 
+}
+
+/* Google Maps */
+#map {
+    height: 400px;
+    width: 100%;
+}

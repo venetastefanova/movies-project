@@ -1,0 +1,33 @@
+<% include ../partials/header %>
+
+<div class="row">
+        <h1 class="text-center">Update your profile information.</h1>
+        <div class="forms">
+                <form action="/my-profile/<%=foundUser._id%>/?_method=PUT" method="POST">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="user[username]" value="<%=foundUser.username%>">
+                    </div>
+                      
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="user[firstName]" value="<%=foundUser.firstName%>">
+                    </div>
+                    <div class="form-group">
+                    <input class="form-control" type="text" name="user[lastName]" value="<%=foundUser.lastName%>">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="user[email]" value="<%=foundUser.email%>">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="user[avatar]" value="<%=foundUser.avatar%>">
+                    </div>
+                    <div class="form-group">
+                            <textarea class="form-control" rows="4" cols="50" name="user[description]" value="<%=foundUser.description%>"><%=foundUser.description%></textarea>
+                    </div>
+
+                <button class="btn-lg btn-primary btn btn-block">Update</button>
+            </form>
+            <a href="/my-profile/<%=foundUser._id%>">Cancel and go back</a>
+        </div>
+</div>
+
+<% include ../partials/footer %>
